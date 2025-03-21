@@ -11,7 +11,7 @@ namespace DotNetDemo.Nugets.CryptoNet_
     /// github <a href="https://github.com/itbackyard/CryptoNet">
     /// website<a href="https://itbackyard.github.io/CryptoNet/docs/introduction.html">
     /// </summary>
-    class CryptoNet_
+    public class CryptoNet_
     {
 
         public CryptoNet_()
