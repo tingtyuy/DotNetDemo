@@ -3,10 +3,11 @@ using Microsoft.Extensions.FileProviders;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices.JavaScript;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DotNetDemo.NameSpaces
+namespace DotNetDemo.NameSpaces.Microsoft_Extensions_Configuration
 {
     /// <summary>
     /// 包含用于设置 IConfiguration 的类和抽象。
@@ -19,12 +20,11 @@ namespace DotNetDemo.NameSpaces
         /// </summary>
         public void ConfigurationBuilder_()
         {
-            var builder=new ConfigurationBuilder();
-            
+            var builder = new ConfigurationBuilder();
+
             builder.SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("dbSetting.json", optional: false, reloadOnChange: true);
 
             builder.AddEnvironmentVariables();
-            builder.add
             builder.Build();
         }
         //public string GetExcleConfigDirectory()
@@ -39,5 +39,7 @@ namespace DotNetDemo.NameSpaces
         //    IConfigurationRoot config = builder.Build();
         //    return config.GetSection("ConnectionConfigs").Get<ConnectionStringsOptions>()!;
         //}
+
+
     }
 }

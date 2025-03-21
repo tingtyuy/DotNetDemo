@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DotNetDemo.NameSpaces
+namespace DotNetDemo.NameSpaces.System_Text
 {
     /// <summary>
     /// https://learn.microsoft.com/zh-cn/dotnet/api/system.text?view=net-9.0&devlangs=csharp&f1url=%3FappId%3DDev17IDEF1%26l%3DZH-CN%26k%3Dk(System.Text)%3Bk(DevLang-csharp)%26rd%3Dtrue

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DotNetDemo.NameSpaces
+namespace DotNetDemo.NameSpaces.System_
 {
     public class System_
     {
