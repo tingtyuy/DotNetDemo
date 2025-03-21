@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DotNetDemo.NameSpaces.Microsoft_AspNetCore_Http
+namespace DotNetDemo.NameSpaces.Microsoft.AspNetCore.Http_
 {
     /// <summary>
     /// 包含用于处理 HTTP 请求和响应的类型。
     /// <inheritdoc https://learn.microsoft.com/zh-cn/dotnet/api/microsoft.aspnetcore.http?view=aspnetcore-9.0/>
     /// https://developer.mozilla.org/zh-CN/docs/Web/HTTP
     /// </summary>
-    public class Microsoft_AspNetCore_Http
+    public class Http_
     {
         /// <summary>
         /// 封装有关单个 HTTP 请求的所有特定于 HTTP 的信息。

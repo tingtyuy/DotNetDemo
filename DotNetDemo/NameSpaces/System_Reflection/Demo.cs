@@ -134,13 +134,14 @@ namespace DotNetDemo.NameSpaces.System_Reflection
             {
                 return strb.ToString();
             }
-            System.Reflection.PropertyInfo[] properties = t.GetType().GetProperties(System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.Public);
+          
+            PropertyInfo[] properties = t.GetType().GetProperties(BindingFlags.Instance | BindingFlags.Public);
 
             if (properties.Length <= 0)
             {
                 return strb.ToString();
             }
-            foreach (System.Reflection.PropertyInfo item in properties)
+            foreach (PropertyInfo item in properties)
             {
                 string name = item.Name;
                 object value = item.GetValue(t, null);

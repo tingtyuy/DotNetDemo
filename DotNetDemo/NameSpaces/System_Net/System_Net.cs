@@ -5,7 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Reflection;
 namespace DotNetDemo.NameSpaces.System_Net
 {
     public class System_Net
@@ -31,14 +31,14 @@ namespace DotNetDemo.NameSpaces.System_Net
 
             List<Cookie> lstCookies = new List<Cookie>();
             Hashtable table = (Hashtable)cc.GetType().InvokeMember("m_domainTable",
-                System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.GetField |
-                System.Reflection.BindingFlags.Instance, null, cc, new object[] { });
+                BindingFlags.NonPublic | BindingFlags.GetField |
+                BindingFlags.Instance, null, cc, new object[] { });
 
             foreach (object pathList in table.Values)
             {
                 SortedList lstCookieCol = (SortedList)pathList.GetType().InvokeMember("m_list",
-                    System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.GetField
-                                                             | System.Reflection.BindingFlags.Instance, null, pathList, new object[] { });
+                    BindingFlags.NonPublic | BindingFlags.GetField
+                                                             | BindingFlags.Instance, null, pathList, new object[] { });
                 foreach (CookieCollection colCookies in lstCookieCol.Values)
                     foreach (Cookie c in colCookies) lstCookies.Add(c);
             }
